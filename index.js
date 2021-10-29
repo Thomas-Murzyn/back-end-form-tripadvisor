@@ -1,7 +1,6 @@
 const express = require("express");
 const formidable = require("express-formidable");
 const cors = require("cors");
-const { response } = require("express");
 require("dotenv").config();
 const app = express();
 app.use(formidable());
