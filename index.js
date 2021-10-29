@@ -16,13 +16,12 @@ app.post("/form", async (req, res) => {
   try {
     console.log("/form");
 
-    const dataForm = ({ subject: "mail", firstname, lastname, email, message } =
-      req.fields);
+    const dataForm = ({ firstname, lastname, email, message } = req.fields);
     console.log(dataForm);
     const data = {
       from: `${dataForm.firstname} ${dataForm.lastname} ${dataForm.email}`,
       to: "murzynthomas@gmail.com",
-      subject: dataForm.subject,
+      subject: dataForm.firstname,
       text: dataForm.message,
     };
 
