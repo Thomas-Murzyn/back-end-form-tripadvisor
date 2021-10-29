@@ -16,7 +16,7 @@ app.post("/form", async (req, res) => {
   try {
     console.log("/form");
 
-    const dataForm = ({ subject, firstname, lastname, email, message } =
+    const dataForm = ({ subject: "mail", firstname, lastname, email, message } =
       req.fields);
     console.log(dataForm);
     const data = {
